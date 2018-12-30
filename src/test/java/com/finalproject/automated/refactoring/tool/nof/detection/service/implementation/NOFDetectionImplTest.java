@@ -68,6 +68,8 @@ public class NOFDetectionImplTest {
                 .methodModels(null)
                 .contentInner("")
                 .loc(0L)
+                .nom(0L)
+                .nof(4L)
                 .build();
     }
 
@@ -84,6 +86,8 @@ public class NOFDetectionImplTest {
                 .methodModels(null)
                 .contentInner("")
                 .loc(0L)
+                .nom(0L)
+                .nof(0L)
                 .build();
     }
 }
