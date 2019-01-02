@@ -3,11 +3,13 @@ package com.finalproject.automated.refactoring.tool.nof.detection.service.implem
 import com.finalproject.automated.refactoring.tool.model.ClassModel;
 import com.finalproject.automated.refactoring.tool.nof.detection.service.NOFDetection;
 import lombok.NonNull;
+import org.springframework.stereotype.Service;
 
+@Service
 public class NOFDetectionImpl implements NOFDetection {
 
     @Override
-    public Long nofDetection(@NonNull ClassModel classModel) {
+    public Long nofDetection(@NonNull    ClassModel classModel) {
         if(classModel.getAttributes() == null){
             return 0L;
         }
