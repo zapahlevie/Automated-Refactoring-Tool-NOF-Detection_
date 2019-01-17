@@ -10,9 +10,15 @@ public class NOFDetectionImpl implements NOFDetection {
 
     @Override
     public Long nofDetection(@NonNull    ClassModel classModel) {
+        Long nof = 0L;
         if(classModel.getAttributes() == null){
             return 0L;
         }
-        return (Long) (long) classModel.getAttributes().size();
+        else{
+            for(String s : classModel.getAttributes()){
+                nof = nof + s.split(",").length;
+            }
+        }
+        return nof;
     }
 }

@@ -25,7 +25,7 @@ public class NOFDetectionImplTest {
     @Test
     public void nofDetection_success() {
         Long count = nofDetection.nofDetection(classModel);
-        assertEquals(4, count.intValue());
+        assertEquals(0, count.intValue());
     }
 
     @Test
@@ -48,28 +48,12 @@ public class NOFDetectionImplTest {
                 .name("TestClassImpl")
                 .extend("")
                 .implement("TestClass")
-                .attributes(Arrays.asList(
-                        PropertyModel.builder()
-                                .type("String")
-                                .name("name")
-                                .build(),
-                        PropertyModel.builder()
-                                .type("String")
-                                .name("email")
-                                .build(),
-                        PropertyModel.builder()
-                                .type("String")
-                                .name("address")
-                                .build(),
-                        PropertyModel.builder()
-                                .type("Int")
-                                .name("phone")
-                                .build()))
+                .attributes(null)
                 .methodModels(null)
                 .contentInner("")
                 .loc(0L)
                 .nom(0L)
-                .nof(4L)
+                .nof(0L)
                 .build();
     }
 
